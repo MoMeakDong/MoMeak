@@ -36,6 +36,10 @@ gulp.task("copy-json",function(){
 gulp.task("copy-img",function(){
 	gulp.src("img/**").pipe(gulp.dest("dist/img"));
 })
+//拷贝font
+gulp.task("copy-font",function(){
+	gulp.src("font/*").pipe(gulp.dest("dist/font"));
+})
 
 // scss文件转化成css文件
 gulp.task("sass",function(){
