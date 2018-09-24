@@ -10,6 +10,8 @@ em{font-style: normal;}
 
 
 $width:1200px;
+
+/* top  */
 #topwrap{
     height:28px;border-bottom:1px solid #ddd;background: #F5f5f5;
     .top{
@@ -37,7 +39,9 @@ $width:1200px;
         #right{
             float:right;
             li{
-                float:left;margin-left:14px;line-height:28px;font-size:12px;color:#666666;position: relative;
+                float:left;margin-left:14px;
+                line-height:28px;font-size:12px;
+                color:#666666;position: relative;
                 span{padding-right:5px;}
                 div{position:absolute;display:none;}
             }
@@ -45,14 +49,148 @@ $width:1200px;
             .hover:hover div{display:block;}
             .rotate:hover{
                 div{display:block;}
-                i{display:inline-block;transform:rotate(180deg);transition: all 1s;}               
-                }
-
-            
+                i{
+                    display:inline-block;
+                    transform:rotate(180deg);
+                    transition: all 0.5s;}               
+            }     
         } 
     }
 }
+
+/* logo  */
 .logo{
     width:$width;margin:0 auto;height:80px;
     img{width:$width;height:80px;}
+}
+
+
+/* search  */
+.search{
+        width:$width;
+        margin:0 auto;
+        height:125px;
+        background:pink;
+        overflow: hidden;
+        img{width:131px;height:81px;margin: 22px 50px;float: left;}
+        .ss{
+            float:left;margin:32px 0 0 72px;width:490px;
+            input{
+                width:382px;height:30px;
+                border:2px solid #459d36;
+                padding: 0 5px 0 15px;
+                line-height: 30px;font-size: 14px;}
+            button{
+                border:0;width: 73px;
+                height: 34px;cursor: pointer;
+                background: #459d36;
+                color: #FFF;font-size: 14px;
+                padding:0;margin:2px 0 0 -4px;}
+            div{
+                margin: 10px 0;
+                width: 498px;
+                height: 17px;
+                overflow: hidden;
+                span{
+                    float: left;
+                    color: #999;
+                }
+                ul{
+                    float:left;
+                    li{
+                        float:left;
+                        padding:0 11px;
+                        border-left: 2px solid #999;
+                        a{color:#999;}
+                      &:hover a{color:#333;}
+                      &:first-child{
+                          border:0;padding-left:0;
+                          a{color:red;}
+                          }
+                    }
+                }
+            }
+        }
+        .car{
+            float: right;
+            margin: 35px 0 0;
+            width: 130px;
+            height: 39px;
+            text-align: center;
+            background: url(../img/shopping-cart.gif) no-repeat;
+            a{
+                line-height: 39px;
+                color: #666;
+                em{display: inline-block;
+                    vertical-align: middle;
+                    margin-top: -4px;
+                    color: #f40;
+                    text-indent: 0;
+                    margin-left: 2px;}
+            }
+        }
+}
+
+/* search  */
+.nav{
+    width:$width;
+    margin:0 auto;
+    height:34px;
+    background:skyblue;
+    .side{
+        position: relative;
+        z-index: 1001;
+        float: left;
+        width: 228px;
+        .hover{
+            float: left;   
+            span{
+                display: inline-block;
+                border: 1px solid #ccc;
+                color: #666;font-size: 16px;
+                width: 112px;
+                height: 32px;
+                text-align: center;
+                cursor: pointer;
+                line-height: 32px;
+                em{display:inline-block;font-size: 14px;padding: 0 5px;}
+                }
+        }
+        div ul{position:absolute;width:228px;height:358px;background: pink;display:none;}
+        .hover:hover{
+            em{
+            transform:rotate(180deg);
+            transition: all 0.5s;
+            }
+            ul{display:block;}
+        }
+    }
+    .list{
+        float: left;height:34px;
+        li{
+            float:left;
+            line-height: 34px;
+             padding: 0 20px;
+            a{
+                font-size: 16px;
+                color: #000;
+                font-weight: 700; 
+            }
+            span{display:inline-block;color:#459d36;font-size:16px;padding:0 5px;}
+            &:hover{
+                a{color:#459d36;}
+                span{
+                    transition: all 0.5s;
+                    transform:rotate(180deg);
+                    }
+            }
+        }
+    }
+}
+
+
+/* banner  */
+#banwrap{
+    height:360px;
+    background: violet;
 }
