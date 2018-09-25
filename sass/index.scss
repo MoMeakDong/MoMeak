@@ -6,7 +6,7 @@ a{text-decoration:none; color:#333;}
 h1,h2,h3,h4,h5,h6{font-weight:100;}
 body{ font-family:"微软雅黑";font-size: 12px;}
 input,a,select{outline:none;}
-em{font-style: normal;}
+em,i{font-style: normal;}
 
 
 $width:1200px;
@@ -25,7 +25,7 @@ $width:1200px;
                 em{font-size:12px;color:#aaa;}
                 &:last-child span{color:#ff6600;}
                 div{width:410px;height:294px;border:1px solid #dadada;
-                position: absolute;display:none;background: pink;}
+                position: absolute;display:none;background: pink;z-index: 10003;}
             }
             .hover:hover{
                 div{display:block;}
@@ -70,7 +70,6 @@ $width:1200px;
         width:$width;
         margin:0 auto;
         height:125px;
-        background:pink;
         overflow: hidden;
         img{width:131px;height:81px;margin: 22px 50px;float: left;}
         .ss{
@@ -136,13 +135,12 @@ $width:1200px;
     width:$width;
     margin:0 auto;
     height:34px;
-    background:skyblue;
     .side{
         position: relative;
         z-index: 1001;
         float: left;
         width: 228px;
-        .hover{
+        div{
             float: left;   
             span{
                 display: inline-block;
@@ -157,12 +155,12 @@ $width:1200px;
                 }
         }
         div ul{position:absolute;width:228px;height:358px;background: pink;display:none;}
-        .hover:hover{
-            em{
-            transform:rotate(180deg);
-            transition: all 0.5s;
-            }
-            ul{display:block;}
+        .hover{
+                em{
+                    transform:rotate(180deg);
+                    transition: all 0.5s;
+                }
+                ul{position:absolute;width: 228px;top: 34px;left: 0;display:block;}
         }
     }
     .list{
@@ -180,9 +178,9 @@ $width:1200px;
             &:hover{
                 a{color:#459d36;}
                 span{
-                    transition: all 0.5s;
-                    transform:rotate(180deg);
-                    }
+                    transition: all 0.4s;
+                    transform:rotate(360deg);
+                }
             }
         }
     }
@@ -192,5 +190,119 @@ $width:1200px;
 /* banner  */
 #banwrap{
     height:360px;
-    background: violet;
+   .banner{
+       width:1200px;height:360px;margin: 0 auto;
+       position:relative;
+   }
+   .pic{width: 780px;height:360px;position:relative;left:228px;}
+    #list{  .index{position:absolute;display: none;}
+            div{
+                width: 780px;
+                img{display:block;width:772px;height:360px;}                  
+            }   
+    }
+    .rBox{
+        position:absolute;right:0;top:0;
+        width:200px;
+        div{border-bottom:1px solid #CECECE;overflow: hidden;background: #fff;
+            img{position: relative;}}
+    }
+    
+    #nums{position:absolute;top:325px;left:513px;}        
+    #nums li{
+            width:20px;height:20px;text-align: center;
+            background:#6E6568;color:white;line-height: 20px;
+            cursor:pointer;margin:0 10px;border-radius: 50%;
+            opacity:0.7;float:left;
+            }
+    #nums li.hover,#nums li:hover{
+            background:white;color:#333333;
+       } 
+}
+
+#conduct{
+        width:$width;
+        height:460px;
+        margin:30px auto 55px;
+  
+        .left{width:329px;height:460px;float:left;}
+        .right{
+            width:820px;height:458px;float:left;padding:0 24px 0;
+            border:1px solid #cecece;border-left:0;
+           
+            .time{
+                height:66px;
+                border-bottom:1px dashed  #CCCCCC;
+                display: flex;align-items:center;
+                li{
+                    margin:0 35px;padding:15px 0;
+                    p{text-align:Center;font-size:12px;color:#8b8b8b;}
+                    span{ display:inline-block;width:7px;height:12px;color:#ccc;}
+                }
+                
+                .hover{
+                    border-bottom:2px solid red ;
+                    p{font-size: 14px;color:red;}
+                } 
+            }
+            #con{
+                 display: flex;align-items:center;justify-content:space-between;
+                 overflow: hidden;width:820px;height:390px;
+                 
+                 ul{overflow: hidden;width:820px;height:390px;}
+                 li{
+                     position: relative;width:157px;margin-right:45px;float: left;
+                    span{
+                         display:inline-block;width: 60px;height:60px;
+                         position:absolute;left:0;top:20px;}
+                    div{
+                        height:208px;padding: 84px 0 40px;
+                        img{width:100%;height:154px;position:relative;}
+                        p{font-size: 12px;color:#333;line-height: 18px;text-align: center;}
+                        em{font-size: 16px;color:red;}
+                    }
+                    a{display:inline-block;width:120px;height:30px;margin: 10px 25px;
+                        background: #ed4044;border-radius: 10px;color:#fff;font-size:12px;
+                        text-align: center;line-height: 30px;}
+                    
+                 }
+            }
+        }
+    }
+
+
+#foods{
+    height:590px;background: yellow;margin: 0 auto;width:1200px;
+    h5{
+        float:left;font-size:18px ;color:#333;line-height: 38px;
+        span{display: inline-block;font-size: 22px;color: #518f44;}
+    }
+    .foodnav{
+        float:right;border:1px solid #ccc;border-bottom:0;height:33px;margin-top:5px;position: relative;
+        li{
+            float:left;padding:6px 0;
+            a{font-size:12px;color:#333;display: inline-block;line-height:20px;
+                padding:0 15px;border-left:1px solid #ccc;}
+            &:first-child a{border:0;}
+          div{position:absolute;right:0;top:34px;width:500px;height:300px;background: violet;z-index: 1001;}
+        }
+        .hover{
+            border:1px solid #449836;
+            a{color:#449836;}
+        }
+    }
+    .box{
+        .top{
+            height:476px;clear: both;
+            .left{
+                width:330px;height:477px;background:url(../img/food01.jpg);float: left;position:relative;
+                div{
+                    width:330px;height:177px;background: #fff;opacity:0.8;position: absolute;bottom: 0;
+                    img{display: inline-block;width:330px;height:30px;margin:15px 0;}
+                    }
+            }
+            .right{float: right;width:870px;height:477px;background: green;}
+        }
+        .bom{height:65px;background: blue;}
+    }
 }
