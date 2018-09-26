@@ -1,0 +1,35 @@
+
+#goodlist{
+    width:1200px;margin:0 auto;overflow: hidden;
+    .page{
+            width:1190px;height:50px;margin:0px auto 20px;border:3px solid #ccc;background: #fff;
+            span{
+                display:inline-block;width:80px;height:50px;border-right: 1px solid #ccc;
+                line-height: 50px;text-align: center;margin:0;font-size: 16px;color:#444;
+            }
+            button{
+                float:right;width:80px;height:40px;margin:4px 10px;
+            }
+        }
+    #listbox{
+        position:relative;right:-212px;margin-top:30px;
+        width:980px;height:1110px;background: #fff;
+        ._ul{
+            width:980px;
+            li{float:left;padding:5px;width:220px;height:350px;border:1px solid #ccc;margin:5px;}
+            img{padding:0;margin:0;width:220px;}
+            p{line-height:17px;font-size: 14px;margin:5px 0;
+              width:220px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+            h3{font-size:20px;color:red;margin:10px;}
+            span{display:inline-block;width:150px;height:30px;background:#fc5927;
+                line-height: 30px; text-align: center;border-radius: 10px;
+                a{color:white;font-size: 14px;}
+            }       
+        }
+    }
+}
+
+
+
+
+

@@ -79,12 +79,48 @@ $(function(){
 	})
 	
 	//foods中hover特效	
-	$("#foods .foodnav li").hover(function(){
+	$("#foods .foodnav li").mouseover(function(){
+		$(this).addClass("hover").siblings().removeClass("hover");
+		$(this).find("div").stop().animate({"display":"block"},300);
+		$(this).siblings().find("div").stop().animate({"display":"none"},200)
+	});
+	 $(".dog img").hover(function(){
+			$(this).stop().animate({"left":-10},300);
+		},function(){
+			$(this).stop().animate({"left":0},300);
+	})
+	 $(".bom img").hover(function(){
+			$(this).stop().animate({"left":-10},300);
+		},function(){
+			$(this).stop().animate({"left":0},300);
+	})
+	
+	
+	
+	//photo
+	$("#photowrap li").hover(function(){
+			$(this).find("img").stop().animate({"top":-10},300);
+			$(this).find("a").stop().animate({"top":-10},300);
+			$(this).find("a").css("color","red");
+		},function(){
+			$(this).find("img").stop().animate({"top":0},300);
+			$(this).find("a").stop().animate({"top":0},300);
+			$(this).find("a").css("color","#444");
+			
+	})
+	
+	
+	//side
+	$("#side li").hover(function(){
 		$(this).addClass("hover");
 	},function(){
 		$(this).removeClass("hover");
 	})
-	        
 	
 	
+	$("#doglist2 li").hover(function(){
+		$(this).find("a").css("color","red");
+	},function(){
+		$(this).find("a").css("color","#444");
+	})
 })

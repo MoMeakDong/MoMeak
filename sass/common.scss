@@ -8,7 +8,7 @@ body{ font-family:"微软雅黑";font-size: 12px;}
 input,a,select{outline:none;}
 em,i{font-style: normal;}
 
-
+body{background:#f5f5f5 ;}
 $width:1200px;
 
 /* top  */
@@ -66,11 +66,12 @@ $width:1200px;
 
 
 /* search  */
+#serwrp{ background: #fff;}
 .search{
         width:$width;
         margin:0 auto;
         height:125px;
-        overflow: hidden;
+        overflow: hidden; 
         img{width:131px;height:81px;margin: 22px 50px;float: left;}
         .ss{
             float:left;margin:32px 0 0 72px;width:490px;
@@ -154,24 +155,7 @@ $width:1200px;
                 em{display:inline-block;font-size: 14px;padding: 0 5px;}
                 }
         }
-        div ul{
-            position:absolute;width:228px;height:358px;background: white;display:none;
-            }
-            #doglist{
-                p{
-                    width:226px;height:118px;border:1px solid #ccc;
-                    span{display:inline-block;width:60px;height:60px;background: url(../img/dog.png) no-repeat 0 0;margin: 27px 5px;border:0;float: left;}
-                    a{display:inline-block;width:110px;height:30px;border:2px solid #ccc;line-height:30px;text-align: center;float:left;margin: 35px 5px;}
-                  }
-            }
-            
-            #doglist2{
-                li{width:113px;height:50px;float:left;line-height: 50px;
-                    text-align: center;border-bottom: 1px solid #ccc;
-                    border-right: 1px solid #ccc;
-                    a{color:#444;font-size: 14px;}
-                }
-            }
+        div ul{position:absolute;width:228px;height:358px;background: pink;display:none;}
         .hover{
                 em{
                     transform:rotate(180deg);
@@ -203,185 +187,21 @@ $width:1200px;
     }
 }
 
-
-/* banner  */
-#banwrap{
-    height:360px;
-   .banner{
-       width:1200px;height:360px;margin: 0 auto;
-       position:relative;
-   }
-   .pic{width: 780px;height:360px;position:relative;left:228px;}
-    #list{  .index{position:absolute;display: none;}
-            div{
-                width: 780px;
-                img{display:block;width:772px;height:360px;}                  
-            }   
+#side{
+    position:fixed;right:0;top:0;z-index: 99998;
+    width:36px;background:#444 ;height:100%;
+    li{position:relative;
+        width:100%;text-align:center;font-size:16px;color:#ccc;margin:30px 0;
+        a{font-size:12px;color:#ccc;}
+        div{position:absolute;left:-300px;top:0;z-index:99999;
+        width:300px;height:300px;background:pink;display:none;}
     }
-    .rBox{
-        position:absolute;right:0;top:0;
-        width:200px;
-        div{border-bottom:1px solid #CECECE;overflow: hidden;background: #fff;
-            img{position: relative;}}
-    }
-    
-    #nums{position:absolute;top:325px;left:513px;}        
-    #nums li{
-            width:20px;height:20px;text-align: center;
-            background:#6E6568;color:white;line-height: 20px;
-            cursor:pointer;margin:0 10px;border-radius: 50%;
-            opacity:0.7;float:left;
-            }
-    #nums li.hover,#nums li:hover{
-            background:white;color:#333333;
-       } 
+    .hover{
+        color:white;
+        a{color: white;}
+        div{display:block;}
+        }
 }
-
-#conduct{
-        width:$width;
-        height:460px;
-        margin:30px auto 55px;
-  
-        .left{width:329px;height:460px;float:left;}
-        .right{
-            width:820px;height:458px;float:left;padding:0 24px 0;
-            border:1px solid #cecece;border-left:0;
-           
-            .time{
-                height:66px;
-                border-bottom:1px dashed  #CCCCCC;
-                display: flex;align-items:center;
-                li{
-                    margin:0 35px;padding:15px 0;
-                    p{text-align:Center;font-size:12px;color:#8b8b8b;}
-                    span{ display:inline-block;width:7px;height:12px;color:#ccc;}
-                }
-                
-                .hover{
-                    border-bottom:2px solid red ;
-                    p{font-size: 14px;color:red;}
-                } 
-            }
-            #con{
-                 display: flex;align-items:center;justify-content:space-between;
-                 overflow: hidden;width:820px;height:390px;
-                 
-                 ul{overflow: hidden;width:820px;height:390px;}
-                 li{
-                     position: relative;width:157px;margin-right:45px;float: left;
-                    span{
-                         display:inline-block;width: 60px;height:60px;
-                         position:absolute;left:0;top:20px;}
-                    div{
-                        height:208px;padding: 84px 0 40px;
-                        img{width:100%;height:154px;position:relative;}
-                        p{font-size: 12px;color:#333;line-height: 18px;text-align: center;}
-                        em{font-size: 16px;color:red;}
-                    }
-                    a{display:inline-block;width:120px;height:30px;margin: 10px 25px;
-                        background: #ed4044;border-radius: 10px;color:#fff;font-size:12px;
-                        text-align: center;line-height: 30px;}
-                    
-                 }
-            }
-        }
-    }
-
-
-#foods{
-    height:590px;margin: 0 auto;width:1200px;
-    h5{
-        float:left;font-size:18px ;color:#333;line-height: 38px;
-        span{display: inline-block;font-size: 22px;color: #518f44;}
-    }
-    .foodnav{
-        float:right;border:1px solid #ccc;border-bottom:0;height:33px;margin-top:5px;position: relative;
-        li{
-            float:left;padding:6px 0;
-            a{font-size:12px;color:#333;display: inline-block;line-height:20px;
-                padding:0 15px;border-left:1px solid #ccc;}
-            &:first-child a{border:0;}
-          .dog{
-              position:absolute;right:-1px;top:34px;width:870px;height:477px;z-index: 1001;border-top:1px solid #008000;display:none;
-              div{
-                  float:left;width:215px;height:237px;border-right:1px solid #ccc;border-bottom:1px solid #ccc;
-                  img{display: inline-block;width:180px;height:132px;margin:20px 17px;position: relative;}
-                  a{
-                      display:block;color: #666;font-size:10px;margin-bottom:15px;
-                      &:hover{color:blue;}
-                  }
-                  span{color: red;font-size: 14px;margin-left: 13px;}
-                  }
-             }
-             &:first-child div{display: block;}
-        }
-        .hover{
-            border:1px solid #449836;
-            
-            a{color:#449836;}
-        }
-    }
-    .box{
-        .top{
-            height:476px;clear: both;
-            .left{
-                width:330px;height:477px;background:url(../img/food01.jpg);float: left;position:relative;
-                div{
-                    width:330px;height:177px;background: #fff;opacity:0.8;position: absolute;bottom: 0;
-                    img{display: inline-block;width:330px;height:30px;margin:15px 0;}
-                    }
-                    ul{
-                        width:330px;
-                        li{float:left;width:86px;height:24px;background:pink;opacity:1;border-radius:10px;
-                        margin:5px 10px;text-align: center;
-                        a{color:#333;line-height: 24px;}
-                        &:hover a{color:blue;}
-                        }
-                    }
-            }
-            .right{float: right;width:870px;height:477px;}
-        }
-        .bom{
-            height:66px;
-            li{
-                img{position: relative;}
-                width:148px;height:65px;border-left:1px solid #ccc;border-bottom:1px solid #ccc;
-                float: left;display: flex;align-items:center;justify-content:center;
-                &:last-child{border-right:1px solid #ccc;}
-            }
-        }
-    }
-}
-
-#photowrap{
-    height:100px;background: #F5F5F5;
-    .photo{
-        height:100px;width:1200px;margin:0 auto;
-        ul{
-            width: 1200px;
-            padding: 19px 0;
-            li{
-                width: 200px;
-                float: left;position:relative;
-                img{display: inline-block;width:55px;height:55px;
-                border-radius: 50%;position: absolute;left:-1px;}
-                a{
-                    display: inline-block;
-                    width: 128px;
-                    height: 62px;
-                    padding-left:72px;
-                    line-height: 62px;
-                    color: #444;
-                    font-weight:700;
-                    font-size: 18px;
-                   position: relative;
-                }
-            }
-        }
-    }
-}
-
-
 
 .footer-wrapper{
     background: #f5f5f5;height:324px;
@@ -459,19 +279,4 @@ $width:1200px;
 }
 
 
-#side{
-    position:fixed;right:0;top:0;z-index: 99998;
-    width:36px;background:#444 ;height:100%;
-    li{position:relative;
-        width:100%;text-align:center;font-size:16px;color:#ccc;margin:30px 0;
-        a{font-size:12px;color:#ccc;}
-        div{position:absolute;left:-300px;top:0;z-index:99999;
-        width:300px;height:300px;background:pink;display:none;}
-    }
-    .hover{
-        color:white;
-        a{color: white;}
-        div{display:block;}
-        }
-}
 
