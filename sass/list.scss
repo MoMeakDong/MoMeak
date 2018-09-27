@@ -17,14 +17,15 @@
         ._ul{
             width:980px;
             li{float:left;padding:5px;width:220px;height:350px;border:1px solid #ccc;margin:5px;}
-            img{padding:0;margin:0;width:220px;}
+            img{padding:0;margin:0;width:220px;height:220px;}
             p{line-height:17px;font-size: 14px;margin:5px 0;
               width:220px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
             h3{font-size:20px;color:red;margin:10px;}
             span{display:inline-block;width:150px;height:30px;background:#fc5927;
                 line-height: 30px; text-align: center;border-radius: 10px;
                 a{color:white;font-size: 14px;}
-            }       
+            }   
+               
         }
     }
 }

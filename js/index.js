@@ -123,4 +123,9 @@ $(function(){
 	},function(){
 		$(this).find("a").css("color","#444");
 	})
+	
+	
+	//购物车数量
+	var cc=$.cookie("num");
+	$(".shopcar").html(cc);
 })

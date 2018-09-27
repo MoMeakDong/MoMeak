@@ -14,7 +14,12 @@
  				if(data.msg=="OK"){
  					alert("登录成功");
 		 				//$("window").attr("location","../index.html");
-		 				location.href="../index.html";
+		 				
+						var otoken=data.data.token;
+						//console.log(otoken);
+						$.cookie("tk",otoken);
+						
+						location.href="../index.html";
 	 				} else{
 	 					alert("用户名或密码错误，请重新登录");
 	 				}
