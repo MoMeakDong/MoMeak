@@ -15,6 +15,10 @@ $(function(){
 		$(this).removeClass("hover");
 		
 	})
+	//
+	$("#goodlist span").click(function(){
+		$(this).addClass("bgblue").siblings().removeClass("bgblue");
+	})
 	
 	
 	$.ajax({

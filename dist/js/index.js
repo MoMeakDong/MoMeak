@@ -125,7 +125,16 @@ $(function(){
 	})
 	
 	
-	//购物车数量
-	var cc=$.cookie("num");
-	$(".shopcar").html(cc);
+	
+	$("body").mouseenter(function(){
+		//购物车数量
+		var cc=$.cookie("num");
+		console.log(cc);
+		$(".shopcar").html(cc);
+	})
+	
+	
 })
+
+	
+
